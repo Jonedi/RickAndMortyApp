@@ -1,0 +1,93 @@
+// Variables
+$myLightBlue: #00AAFF;
+$myDarkBlue: #00000F;
+$myGold: #CCA70A;
+$myPurple: #2A002B;
+$mySilver: #C0C0C0;
+$myOrange: #F4CE2C;
+$myGray: #606060;
+$myBlack: #0C0C0C;
+// fin Variables
+
+html {
+  scroll-behavior: smooth;
+}
+.card {
+  box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+  box-sizing: border-box;
+  margin: 10px 0;
+  background-color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 529px;
+  transition: all 0.2 ease-in-out;
+  img {
+    opacity: 0.7;
+    width: 100%;
+    transition: opacity 0.7 ease-in-out;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .card-inner {
+    padding: 10px;
+  }
+}
+.card-home {
+  &:hover {
+    box-shadow: 0 5px 5px rgba(0,0,0,.19), 0 6px 6px rgba(0,0,0,.24);
+    cursor: pointer;
+  }
+}
+.bg-dark {
+  background-color: $myDarkBlue !important;
+}
+.myLogo {
+  width: 40%;
+}
+.btn-outline-myGold {
+  color: $myGold;
+  border-color: $mySilver;
+  &:hover {
+    background-color: $myGold;
+    color: $myDarkBlue;
+  }
+}
+.txt-hover h2:hover {
+  color: $myPurple !important;
+}
+.no-hidden {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  visibility: visible;
+}
+.footer {
+  background-color: $myDarkBlue;
+  /* position: absolute;
+  bottom: 0;
+  width: 100%; */
+  display: flex;
+  align-self: flex-end;
+  h4 {
+    color: $mySilver;
+    text-align: right;
+  }
+  animation: preloader 7s;
+}
+@keyframes preloader {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media (max-width: 570px) {
+  .card {
+    img { opacity: 1; }
+  }
+}

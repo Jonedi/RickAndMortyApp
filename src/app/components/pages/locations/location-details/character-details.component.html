@@ -1,0 +1,36 @@
+<div class="row justify-content-center mt-3" *ngIf="character$ | async as character">
+  <div class="col-12 col-sm-6 justify-content-center">
+    <div class="card">
+      <div class="image">
+        <img
+          [src]="character.image"
+          [alt]="character.name"
+          class="ch-img-top"
+        />
+      </div>
+      <div class="card-inner">
+        <div class="header">
+          <h3 class=" text-primary">Nombre: {{ character.name }}</h3>
+          <h5 class="text-muted">Género: {{ character.gender }}</h5>
+          <h6 class="text-muted">Estado: {{ character.status }}</h6>
+          <h6 class="text-muted">Última Ubicación:{{ character.location.name }}</h6>
+          <!-- <h6 class="text-muted">
+            Última Ubicación:
+            <a [routerLink]="['/location-details', getLoc(character.location.url)]" class="text-decoration-none txt-hover">
+              {{ character.location.name }}
+            </a>
+          </h6> -->
+          <h6 class="text-muted">Especie: {{ character.species }}</h6>
+          <!-- <h6 class="text-muted">1er Episodio: {{ character.episode | slice:0:1 }}</h6> -->
+          <h6 class="text-muted">Fecha Creación: {{ character.created | date }}</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container my-3">
+    <button
+      class="btn btn-dark btn-secondary btn-lg"
+      (click)="goBack()"
+    >Back</button>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="row justify-content-center mt-3" *ngIf="location$ | async as location">
+  <div class="col-12 col-sm-6 justify-content-center">
+    <div class="card">
+      <div class="card-inner">
+        <div class="header">
+          <h3 class=" text-primary">Nombre: {{ location.name }}</h3>
+          <h5 class="text-muted">Tipo: {{ location.type }}</h5>
+          <h6 class="text-muted">Dimension: {{ location.dimension }}</h6>
+          <h6 class="text-muted">Fecha Creación: {{ location.created }}</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container my-3">
+    <button
+      class="btn btn-dark btn-secondary btn-lg"
+      (click)="goBack()"
+    >Back</button>
+  </div>
+</div>
